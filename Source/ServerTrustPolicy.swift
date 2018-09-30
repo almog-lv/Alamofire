@@ -63,7 +63,7 @@ extension URLSession {
         static var managerKey = "URLSession.ServerTrustPolicyManager"
     }
 
-    var serverTrustPolicyManager: ServerTrustPolicyManager? {
+    public var serverTrustPolicyManager: ServerTrustPolicyManager? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.managerKey) as? ServerTrustPolicyManager
         }
